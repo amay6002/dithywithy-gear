@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dithywithy's Streaming & Gaming Setup (2026) | Full Gear List</title>
+<meta name="description" content="The complete gaming, streaming, and music production setup used by Dithywithy. Mouse, monitor, audio gear, PC specs, desk setup, and everything else on the desk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark:#0e0e10;
+    --bg-dark-2:#18181b;
+    --bg-light:#ffffff;
+    --ink:#111111;
+    --ink-soft:#3a3a3d;
+    --paper:#fafaf8;
+    --purple:#9147ff;
+    --purple-bright:#a970ff;
+    --purple-deep:#772ce8;
+    --pink:#ff5fb6;
+    --muted:#8b8b93;
+    --line:#1f1f23;
+    --radius:14px;
+    --max:1100px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg-dark);
+    color:var(--ink);
+    font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+
+  /* ---------- topbar ---------- */
+  .topbar{
+    background:var(--bg-dark);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .topbar-inner{
+    max-width:var(--max);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:16px;letter-spacing:.2px;}
+  .brand-dot{width:30px;height:30px;border-radius:50%;background:var(--purple-deep);
+    display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+  .brand-sub{color:var(--muted);font-weight:500;}
+  .topbar nav{display:flex;gap:22px;align-items:center;}
+  .topbar nav a{color:#cfcfd3;font-size:14px;font-weight:600;transition:color .15s;}
+  .topbar nav a:hover{color:#fff;}
+  .topbar .twitch-pill{
+    background:transparent;border:1px solid var(--purple-deep);color:var(--purple-bright);
+    padding:7px 16px;border-radius:999px;font-size:13px;font-weight:700;
+  }
+  .topbar .twitch-pill:hover{background:var(--purple-deep);color:#fff;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:var(--bg-dark);
+    padding:72px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:var(--max);margin:0 auto;padding:0 28px;
+    display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;
+  }
+  .eyebrow{
+    color:var(--purple-bright);font-weight:700;font-size:13px;letter-spacing:.06em;
+    text-transform:lowercase;margin:0 0 14px;
+  }
+  .hero h1{
+    color:#fff;font-size:44px;line-height:1.12;font-weight:800;margin:0 0 18px;letter-spacing:-.02em;
+  }
+  .hero h1 .accent{color:var(--purple-bright);}
+  .hero-sub{color:#b9b9c0;font-size:16px;line-height:1.6;max-width:480px;margin:0 0 28px;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--purple-deep);color:#fff;font-weight:700;font-size:15px;
+    padding:13px 24px;border-radius:999px;border:none;transition:background .15s,transform .15s;
+  }
+  .btn-primary:hover{background:var(--purple-bright);transform:translateY(-1px);}
+
+  .hero-doodle-wrap{display:flex;justify-content:center;align-items:center;}
+  .hero-doodle{width:100%;max-width:340px;color:#fff;}
+
+  /* ---------- filter bar ---------- */
+  .filter-bar{
+    background:var(--bg-dark-2);border-bottom:1px solid var(--line);border-top:1px solid var(--line);
+    position:sticky;top:61px;z-index:40;
+  }
+  .filter-inner{
+    max-width:var(--max);margin:0 auto;padding:14px 28px;
+    display:flex;gap:10px;flex-wrap:wrap;
+  }
+  .chip{
+    background:transparent;border:1px solid #3a3a40;color:#d4d4d8;
+    padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;
+    transition:all .15s;text-transform:lowercase;
+  }
+  .chip:hover{border-color:var(--purple-bright);color:#fff;}
+  .chip.active{background:var(--purple-deep);border-color:var(--purple-deep);color:#fff;}
+
+  /* ---------- grid / cards ---------- */
+  main{background:var(--bg-dark);padding:56px 0 80px;}
+  .section-label{
+    color:#fff;font-size:13px;font-weight:700;text-transform:lowercase;
+    letter-spacing:.04em;margin:0 0 4px;display:flex;align-items:center;gap:8px;
+  }
+  .section-label .bar{width:18px;height:3px;background:var(--purple-bright);border-radius:2px;}
+  .section-title{color:#fff;font-size:24px;font-weight:800;margin:0 0 28px;}
+
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:20px;
+  }
+
+  .card{
+    background:var(--paper);
+    border-radius:var(--radius);
+    border:1px solid #ececea;
+    padding:22px 20px 20px;
+    display:flex;flex-direction:column;
+    position:relative;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(0,0,0,.35);}
+
+  .card-tag{
+    position:absolute;top:14px;left:14px;
+    background:var(--ink);color:#fff;
+    font-size:10px;font-weight:700;text-transform:lowercase;letter-spacing:.04em;
+    padding:4px 10px;border-radius:999px;
+  }
+
+  .card-icon{
+    width:100%;height:108px;display:flex;align-items:center;justify-content:center;
+    margin-bottom:14px;color:var(--ink);
+  }
+  .card-icon svg{width:84px;height:84px;}
+
+  .card h3{margin:0 0 6px;font-size:17px;font-weight:800;color:var(--ink);}
+  .card p.blurb{margin:0 0 14px;font-size:13.5px;line-height:1.5;color:var(--ink-soft);flex-grow:0;}
+
+  /* the "specs sign" panel, riffing on the cat-holding-a-sign panel */
+  .sign{
+    background:#fff;
+    border:2px solid var(--ink);
+    border-radius:255px 18px 225px 18px / 18px 225px 18px 255px;
+    padding:12px 14px 10px;
+    margin:0 0 16px;
+    transform:rotate(-0.6deg);
+  }
+  .sign .sign-label{
+    font-family:'Caveat',cursive;font-size:17px;font-weight:700;color:var(--ink);
+    display:block;margin-bottom:4px;letter-spacing:.02em;
+  }
+  .sign ul{margin:0;padding:0;list-style:none;}
+  .sign li{
+    font-size:12.5px;color:var(--ink-soft);line-height:1.65;
+    padding-left:14px;position:relative;
+  }
+  .sign li::before{
+    content:"▸";position:absolute;left:0;color:var(--purple-deep);font-size:11px;top:1px;
+  }
+
+  .card-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .btn-card{
+    background:var(--purple-deep);color:#fff;font-weight:700;font-size:13px;
+    padding:10px 16px;border-radius:999px;border:none;display:inline-flex;align-items:center;gap:6px;
+    transition:background .15s;white-space:nowrap;
+  }
+  .btn-card:hover{background:var(--purple-bright);}
+  .price-note{font-size:11px;color:var(--muted);font-weight:600;}
+
+  .hidden{display:none !important;}
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--bg-dark-2);border-top:1px solid var(--line);padding:32px 0;
+  }
+  .footer-inner{
+    max-width:var(--max);margin:0 auto;padding:0 28px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  footer p{margin:0;color:#9d9da3;font-size:12.5px;line-height:1.6;}
+  footer .muted{color:#65656b;}
+  footer a.twitch-link{color:var(--purple-bright);font-weight:600;}
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;text-align:center;}
+    .hero-sub{margin-left:auto;margin-right:auto;}
+    .hero-doodle-wrap{order:-1;}
+    .hero h1{font-size:34px;}
+    .filter-bar{top:57px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;}
+  }
+  :focus-visible{outline:2px solid var(--purple-bright);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="brand-dot">🐇</span> dithywithy <span class="brand-sub">/ gear</span></div>
+    <nav>
+      <a href="#gear">the gear</a><a href="#setup-value">setup value</a>
+      <a href="https://twitch.tv/dithywithy" class="twitch-pill" target="_blank" rel="noopener">watch live</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">streamin n shii</p>
+      <h1>everything on my desk<br>(and where to <span class="accent">get it</span>)</h1>
+      <p class="hero-sub">i get asked about my setup a lot, so here it is — what i actually stream and make music with. swap this stuff in for your own and it's an easy way to support the channel.</p>
+      <a href="#gear" class="btn-primary">see the gear ↓</a>
+    </div>
+    <div class="hero-doodle-wrap">
+      <svg class="hero-doodle" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- desk -->
+        <path d="M30 210 L290 210" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M45 210 L45 250" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M275 210 L275 250" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <!-- monitor -->
+        <rect x="95" y="95" width="130" height="92" rx="10" stroke="currentColor" stroke-width="4"/>
+        <path d="M140 195 L180 195 L188 210 L132 210 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M118 118 Q160 105 202 122" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+        <!-- mic -->
+        <circle cx="262" cy="150" r="22" stroke="currentColor" stroke-width="4"/>
+        <path d="M250 168 Q262 200 262 210" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M262 210 L262 222" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M244 222 L280 222" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <!-- mouse + pad -->
+        <rect x="40" y="190" width="46" height="14" rx="7" stroke="currentColor" stroke-width="3" opacity=".7"/>
+        <path d="M52 170 q6 -14 14 0 l0 16 q-7 6 -14 0 z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- little sparkle -->
+        <path d="M40 70 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" opacity=".7"/>
+      </svg>
+    </div>
+  </div>
+
+</section>
+
+<section id="setup-value" style="background:#0e0e10;padding:20px 0 10px;">
+  <div class="wrap">
+    <p class="section-label"><span class="bar"></span>setup value</p>
+    <h2 class="section-title">what this chaos costs</h2>
+    <div class="grid">
+      <div class="card"><h3>audio setup</h3><p>$500+</p></div>
+      <div class="card"><h3>desk setup</h3><p>$700+</p></div>
+      <div class="card"><h3>pc build</h3><p>$1,500+</p></div>
+      <div class="card"><h3>total setup</h3><p>$2,700+</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="most-asked" style="background:#0e0e10;padding:10px 0 30px;">
+  <div class="wrap">
+    <p class="section-label"><span class="bar"></span>most asked about</p>
+    <div class="filter-inner">
+      <span class="chip active">MOTU M2</span>
+      <span class="chip">G Pro X Superlight</span>
+      <span class="chip">MSI G272QPF</span>
+    </div>
+  </div>
+</section>
+
+<nav class="filter-bar" id="gear">
+  <div class="filter-inner" id="filters"></div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <p class="section-label"><span class="bar"></span>the loadout</p>
+    <h2 class="section-title">what's actually on my desk</h2>
+    <div class="grid" id="grid"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>as an amazon associate, dithywithy earns from qualifying purchases. prices and availability shown on amazon may differ from what's listed here.</p>
+    <p class="muted">made with way too much love for a desk setup &nbsp;·&nbsp; <a class="twitch-link" href="https://twitch.tv/dithywithy" target="_blank" rel="noopener">twitch.tv/dithywithy</a></p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   EDIT YOUR GEAR HERE
+   - amazonUrl: paste your real Amazon affiliate link (must include your Associate tag, e.g. ?tag=yourtag-20)
+   - tag: which filter category it shows under -> "audio" | "visual" | "desk"
+   - icon: one of the keys in the ICONS object below (or "misc" for a generic fallback)
+   - specs: 2-3 short bullet points, keep them short so the sign doesn't overflow
+   ============================================================ */
+const GEAR = [
+  {
+    name: "Rode NT1-A",
+    tag: "audio",
+    icon: "mic",
+    blurb: "the microphone i use for streaming, vocals, and recording. super clean and ridiculously quiet for the price.",
+    specs: ["large-diaphragm condenser","cardioid pickup pattern","requires 48v phantom power"],
+    amazonUrl: "https://amzn.to/4uK7o45"
+  },
+  {
+    name: "MOTU M2",
+    tag: "audio",
+    icon: "interface",
+    blurb: "my audio interface. crystal clear preamps, great headphone output, and zero headaches.",
+    specs: ["2 in / 2 out","ESS Sabre DAC","24-bit / 192kHz"],
+    amazonUrl: "https://amzn.to/4xFe6ej"
+  },
+  {
+    name: "Boom Arm",
+    tag: "audio",
+    icon: "stand",
+    blurb: "keeps the mic positioned exactly where i need it while keeping the desk clean.",
+    specs: ["adjustable positioning","clean cable routing","keeps mic off desk"],
+    amazonUrl: "https://amzn.to/4xHVnyH"
+  },
+  {
+    name: "TINHIFI C2 Mech Warrior",
+    tag: "audio",
+    icon: "iem",
+    blurb: "the iems i use daily for gaming, monitoring, music production, and pretty much everything else.",
+    specs: ["LCP + PU diaphragm","0.78mm detachable cable","excellent imaging"],
+    amazonUrl: "https://amzn.to/4g3jD8d"
+  },
+  {
+    name: "MSI G272QPF",
+    tag: "visual",
+    icon: "monitor",
+    blurb: "my main gaming monitor. 1440p, fast IPS panel, and smooth enough for competitive games.",
+    specs: ["27-inch QHD","170Hz Rapid IPS","1ms response time"],
+    amazonUrl: "https://amzn.to/4eBKvcO"
+  },
+  {
+    name: "Korfile 66\" L-Shaped Desk",
+    tag: "desk",
+    icon: "desk",
+    blurb: "the desk that holds the entire setup together. lots of room, storage, and built-in power.",
+    specs: ["66-inch L shape","LED lighting","drawers + shelving"],
+    amazonUrl: "https://amzn.to/4vZ6txo"
+  },
+  {
+    name: "Logitech G Pro X Superlight",
+    tag: "desk",
+    icon: "mouse",
+    blurb: "the mouse i've been using for gaming. insanely light and one of the safest picks for almost any game.",
+    specs: ["Hero 25K sensor","63g ultra-lightweight","wireless low latency"],
+    amazonUrl: "https://amzn.to/4fYvK6i"
+  },
+  {
+    name: "Wallhack SP-005 Glass Pad",
+    tag: "desk",
+    icon: "mousepad",
+    blurb: "a glass mousepad with a ridiculously smooth glide. probably the weirdest thing on my desk.",
+    specs: ["tempered glass surface","ultra-fast glide","esports focused"],
+    amazonUrl: "https://amzn.to/3ShpUDm"
+  },
+  {
+    name: "Intel Core Ultra 7 270K",
+    tag: "pc",
+    icon: "misc",
+    blurb: "the cpu powering my gaming, streaming, editing, and music production setup.",
+    specs: ["24 cores total","5.5GHz boost","8P + 16E cores"],
+    amazonUrl: "https://amzn.to/4oHg1Lk"
+  },
+  {
+    name: "PNY RTX 5060 Ti OC",
+    tag: "pc",
+    icon: "misc",
+    blurb: "the graphics card running everything from competitive games to editing and content creation.",
+    specs: ["8GB GDDR7","DLSS 4","2692MHz boost"],
+    amazonUrl: "https://amzn.to/4eU0zIe"
+  }
+];
+
+const ICONS = {
+  mic: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="38" r="20" stroke="currentColor" stroke-width="4.5"/><path d="M32 50 Q50 78 50 86" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M50 86 L50 94" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M30 94 L70 94" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg>`,
+  interface: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="32" width="72" height="40" rx="7" stroke="currentColor" stroke-width="4.5"/><circle cx="34" cy="52" r="8" stroke="currentColor" stroke-width="3.5"/><circle cx="58" cy="52" r="8" stroke="currentColor" stroke-width="3.5"/><path d="M74 46 L78 46" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M74 58 L78 58" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>`,
+  stand: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 88 L80 88" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M50 88 L50 60" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M50 60 Q50 24 78 28" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="80" cy="30" r="10" stroke="currentColor" stroke-width="4"/></svg>`,
+  iem: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38 30 Q26 30 24 44 Q22 58 34 64 Q44 68 46 56 Q48 46 40 42" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 56 Q62 52 72 62 Q80 70 76 80" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="76" cy="82" r="4" stroke="currentColor" stroke-width="3.5"/></svg>`,
+  monitor: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="76" height="50" rx="6" stroke="currentColor" stroke-width="4.5"/><path d="M38 84 L62 84 L67 92 L33 92 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>`,
+  desk: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 42 L90 42" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M18 42 L18 80" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M82 42 L82 80" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><rect x="34" y="20" width="32" height="22" rx="4" stroke="currentColor" stroke-width="3.5" opacity=".75"/></svg>`,
+  mouse: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38 30 Q50 14 62 30 L62 64 Q50 80 38 64 Z" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/><path d="M50 30 L50 48" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>`,
+  mousepad: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="34" width="76" height="34" rx="9" stroke="currentColor" stroke-width="4.5"/><path d="M24 50 L76 50" stroke="currentColor" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round" opacity=".6"/></svg>`,
+  misc: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="4.5"/><path d="M50 36 L50 50 L60 58" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+};
+
+const CATEGORY_LABELS = { all: "all", audio: "audio", visual: "visual", desk: "desk & setup", pc: "pc build" };
+
+function renderFilters(){
+  const el = document.getElementById('filters');
+  el.innerHTML = Object.keys(CATEGORY_LABELS).map((key,i) =>
+    `<button class="chip${i===0?' active':''}" data-filter="${key}">${CATEGORY_LABELS[key]}</button>`
+  ).join('');
+  el.addEventListener('click', e=>{
+    const btn = e.target.closest('.chip');
+    if(!btn) return;
+    el.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid(btn.dataset.filter);
+  });
+}
+
+function renderGrid(filter='all'){
+  const grid = document.getElementById('grid');
+  grid.innerHTML = GEAR
+    .filter(g => filter==='all' || g.tag===filter)
+    .map(g => `
+      <article class="card">
+        <span class="card-tag">${g.tag}</span>
+        <div class="card-icon">${ICONS[g.icon] || ICONS.misc}</div>
+        <h3>${g.name}</h3>
+        <p class="blurb">${g.blurb}</p>
+        <div class="sign">
+          <span class="sign-label">specs</span>
+          <ul>${g.specs.map(s=>`<li>${s}</li>`).join('')}</ul>
+        </div>
+        <div class="card-footer">
+          <span class="price-note">check current price</span>
+          <a class="btn-card" href="${g.amazonUrl}" target="_blank" rel="sponsored noopener noreferrer">get it →</a>
+        </div>
+      </article>
+    `).join('');
+}
+
+renderFilters();
+renderGrid('all');
+</script>
+</body>
+</html>
